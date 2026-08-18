@@ -25,8 +25,9 @@ _Last updated: 2026-08-14_
 | Dev Executor | tsx (watch mode) | ^4.16.5 |
 | Build | tsc (TypeScript compiler) | ^5.5.4 |
 | Path Alias Resolver | vite-tsconfig-paths | ^4.3.2 |
-| **Week 2+** ORM | Prisma | TBD |
-| **Week 2+** Database | PostgreSQL | TBD |
+| **Week 2+** ORM | Prisma + @prisma/client | ^7.9.1 |
+| **Week 2+** Database | PostgreSQL + @prisma/adapter-pg + pg | ^8.23.0 |
+| **Week 2+** Test DB | @electric-sql/pglite + pglite-prisma-adapter | ^0.4.3 / ^0.7.2 |
 | **Week 3+** Auth | argon2id / bcrypt + JWT | TBD |
 | **Week 4+** Cache | Redis + ioredis | TBD |
 | **Week 4+** Queue | BullMQ | TBD |
@@ -213,7 +214,7 @@ node-js/
 | Week | Tema | Status |
 |------|------|--------|
 | **Week 1** | Node.js Internals, Streams, Express TS, Zod, Error Handling | 🟢 Selesai (9/9 Tasks Lolos & Terverifikasi) |
-| **Week 2** | PostgreSQL, Advanced SQL, Prisma ORM | 🔲 Belum direncanakan |
+| **Week 2** | PostgreSQL, Advanced SQL, Prisma ORM | 🟢 Selesai (8/8 Tasks Lolos & Terverifikasi) |
 | **Week 3** | Clean Architecture, JWT Auth, RBAC, OWASP | 🔲 Belum direncanakan |
 | **Week 4** | Redis, BullMQ, WebSockets, Testing >80% | 🔲 Belum direncanakan |
 | **Week 5** | Structured Logging, Docker, OpenAPI, CI/CD | 🔲 Belum direncanakan |

@@ -33,25 +33,25 @@
 
 ### ✨ Key Architectural Features
 
-* **🧠 Node.js Runtime Internals & Event Loop Lab:** Verified deterministic scheduling order across Microtasks (`process.nextTick`, `Promise`), Macrotasks (`setImmediate`, `setTimeout`), and Call Stack.
-* **🌊 Memory-Safe Stream Pipelines:** High-throughput log transformation utilizing `node:stream/promises` `pipeline` and `Transform` streams with automatic backpressure and PII data masking (`***REDACTED***`).
-* **🛡️ Centralized Error Handling & JSON Envelope:** Custom `AppError` hierarchy differentiating operational errors from system faults, returning unified RFC-style error envelopes.
-* **🏷️ Distributed Tracing & Observability:** Injects and propagates `x-request-id` (Correlation ID) across the entire request lifecycle paired with ultra-fast structured JSON logging via `Pino`.
-* **🔒 Strict Schema Validation:** Decoupled input validation middleware powered by `Zod` covering `req.body`, `req.query`, and `req.params`.
-* **🧪 Test-Driven Development (TDD):** Comprehensive unit and integration test suite using `Vitest` and `Supertest` without physical port collision.
-* **🛑 Graceful Shutdown:** Connection draining handling OS signals (`SIGINT`, `SIGTERM`) with failsafe timeouts for zero-downtime containerized deployments.
+- **🧠 Node.js Runtime Internals & Event Loop Lab:** Verified deterministic scheduling order across Microtasks (`process.nextTick`, `Promise`), Macrotasks (`setImmediate`, `setTimeout`), and Call Stack.
+- **🌊 Memory-Safe Stream Pipelines:** High-throughput log transformation utilizing `node:stream/promises` `pipeline` and `Transform` streams with automatic backpressure and PII data masking (`***REDACTED***`).
+- **🛡️ Centralized Error Handling & JSON Envelope:** Custom `AppError` hierarchy differentiating operational errors from system faults, returning unified RFC-style error envelopes.
+- **🏷️ Distributed Tracing & Observability:** Injects and propagates `x-request-id` (Correlation ID) across the entire request lifecycle paired with ultra-fast structured JSON logging via `Pino`.
+- **🔒 Strict Schema Validation:** Decoupled input validation middleware powered by `Zod` covering `req.body`, `req.query`, and `req.params`.
+- **🧪 Test-Driven Development (TDD):** Comprehensive unit and integration test suite using `Vitest` and `Supertest` without physical port collision.
+- **🛑 Graceful Shutdown:** Connection draining handling OS signals (`SIGINT`, `SIGTERM`) with failsafe timeouts for zero-downtime containerized deployments.
 
 ---
 
 ## 🛠️ Built With
 
-* **Runtime:** [Node.js (v20+ LTS)](https://nodejs.org/)
-* **Language:** [TypeScript](https://www.typescriptlang.org/)
-* **Framework:** [Express.js](https://expressjs.com/)
-* **Validation:** [Zod](https://zod.dev/)
-* **Logger:** [Pino](https://getpino.io/) & [Pino-Pretty](https://github.com/pinojs/pino-pretty)
-* **Testing:** [Vitest](https://vitest.dev/) & [Supertest](https://github.com/ladjs/supertest)
-* **Runner:** [tsx](https://github.com/privatenumber/tsx)
+- **Runtime:** [Node.js (v20+ LTS)](https://nodejs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Framework:** [Express.js](https://expressjs.com/)
+- **Validation:** [Zod](https://zod.dev/)
+- **Logger:** [Pino](https://getpino.io/) & [Pino-Pretty](https://github.com/pinojs/pino-pretty)
+- **Testing:** [Vitest](https://vitest.dev/) & [Supertest](https://github.com/ladjs/supertest)
+- **Runner:** [tsx](https://github.com/privatenumber/tsx)
 
 ---
 
@@ -59,28 +59,32 @@
 
 ### Prerequisites
 
-* **Node.js**: `>= 20.0.0`
-* **npm**: `>= 10.0.0`
+- **Node.js**: `>= 20.0.0`
+- **npm**: `>= 10.0.0`
 
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/hadidwirsty/node-backend-mastery.git
    cd node-backend-mastery
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Run in development mode (with hot-reloading):**
+
    ```bash
    npm run dev
    ```
 
 4. **Execute automated test suites:**
+
    ```bash
    # Run all tests once
    npm test
@@ -100,8 +104,9 @@
 ## 🔌 API Endpoints Reference
 
 ### 1. Health & Liveness Probe
-* **Endpoint:** `GET /api/v1/health`
-* **Response (200 OK):**
+
+- **Endpoint:** `GET /api/v1/health`
+- **Response (200 OK):**
   ```json
   {
     "status": "success",
@@ -114,14 +119,15 @@
   ```
 
 ### 2. Streaming Log Transformer & Sanitizer
-* **Endpoint:** `POST /api/v1/logs/transform`
-* **Header:** `Content-Type: text/plain`
-* **Body:**
+
+- **Endpoint:** `POST /api/v1/logs/transform`
+- **Header:** `Content-Type: text/plain`
+- **Body:**
   ```text
   INFO 2026-08-14 User logged in with password=SecretPassword123
   WARN 2026-08-14 API request failed with token=BearerSecureToken999
   ```
-* **Response (200 OK):**
+- **Response (200 OK):**
   ```json
   {
     "status": "success",
@@ -146,13 +152,13 @@
 
 ## 🗺️ 5-Week Acceleration Roadmap
 
-| Phase | Focus Area | Status | Deliverable |
-| :--- | :--- | :---: | :--- |
-| **Week 1** | **Node.js Internals & Express TypeScript Core** | ✅ **Completed** | *Streaming Data Pipeline & Express TS Boilerplate* |
-| **Week 2** | **PostgreSQL, Advanced SQL & Prisma ORM** | 🔄 *Next Up* | *E-Commerce Data Engine with Atomic Transactions* |
-| **Week 3** | **Clean Architecture, Dual-Token JWT & API Security** | ⏳ *Planned* | *Multi-Tenant SaaS Auth & RBAC API* |
-| **Week 4** | **Redis Caching, BullMQ Queues & WebSockets** | ⏳ *Planned* | *Real-Time Task & Event Processing Service* |
-| **Week 5** | **Observability, Dockerization & Capstone Project** | ⏳ *Planned* | *Production-Ready FinTech Management REST API* |
+| Phase      | Focus Area                                            |      Status      | Deliverable                                        |
+| :--------- | :---------------------------------------------------- | :--------------: | :------------------------------------------------- |
+| **Week 1** | **Node.js Internals & Express TypeScript Core**       | ✅ **Completed** | _Streaming Data Pipeline & Express TS Boilerplate_ |
+| **Week 2** | **PostgreSQL, Advanced SQL & Prisma ORM**             |   🔄 _Next Up_   | _E-Commerce Data Engine with Atomic Transactions_  |
+| **Week 3** | **Clean Architecture, Dual-Token JWT & API Security** |   ⏳ _Planned_   | _Multi-Tenant SaaS Auth & RBAC API_                |
+| **Week 4** | **Redis Caching, BullMQ Queues & WebSockets**         |   ⏳ _Planned_   | _Real-Time Task & Event Processing Service_        |
+| **Week 5** | **Observability, Dockerization & Capstone Project**   |   ⏳ _Planned_   | _Production-Ready FinTech Management REST API_     |
 
 ---
 
@@ -192,5 +198,6 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 ## 👤 Author
 
 **Muhammad Hadid Wiransetyo**
-* GitHub: [@hadidwirsty](https://github.com/hadidwirsty)
-* Repository: [node-backend-mastery](https://github.com/hadidwirsty/node-backend-mastery)
+
+- GitHub: [@hadidwirsty](https://github.com/hadidwirsty)
+- Repository: [node-backend-mastery](https://github.com/hadidwirsty/node-backend-mastery)
